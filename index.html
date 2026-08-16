@@ -7,7 +7,7 @@
 <meta name="description" content="Three University of Virginia spin-off companies, HTIC, MG Therapeutics, and EV53, all built around MG53 and membrane-repair biology.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,500;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,500;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#FAF6EC;
@@ -32,7 +32,7 @@
   --sans:'DM Sans',-apple-system,'Helvetica Neue',Arial,sans-serif;
   --serif:'Lora',Georgia,serif;
   --display:'Playfair Display',serif;
-  --wordmark:'Playfair Display',serif;
+  --wordmark:'Lora',Georgia,serif;
   --maxw:1180px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -64,7 +64,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;color:va
 nav{position:fixed;top:0;left:0;right:0;z-index:60;padding:22px 0;transition:background .3s,padding .3s,box-shadow .3s}
 nav.solid{background:rgba(250,246,236,.9);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:14px 0}
 nav .wrap{display:flex;align-items:center;justify-content:space-between}
-.wordmark{font-family:var(--wordmark);font-weight:700;font-size:18px;letter-spacing:.01em;color:var(--headline);text-decoration:none;font-variant-numeric:lining-nums}
+.wordmark{font-family:var(--wordmark);font-weight:700;font-size:19px;letter-spacing:.005em;color:var(--headline);text-decoration:none;font-variant-numeric:lining-nums}
 .wordmark em{font-style:normal;color:var(--htic)}
 .wordmark .sub{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-left:8px;vertical-align:middle}
 .navlinks{display:flex;gap:30px;align-items:center}
@@ -102,8 +102,9 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between}
 
 .arcart{width:100%;max-width:1080px;margin:0 auto}
 .arcart svg{width:100%;height:auto;overflow:visible}
-.mark-label{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;fill:var(--mute)}
-.mark-tag{font-family:var(--serif);font-style:italic;font-size:15px;fill:var(--mute2)}
+.mark-label{font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;fill:var(--mute)}
+.mark-tag{font-family:var(--serif);font-style:italic;font-size:17px;fill:var(--mute2)}
+.arc-caption{margin-top:20px;text-align:center;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--mute2)}
 
 /* ---------- SIGNATURE LINE ---------- */
 .strapline{padding:64px 0;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -216,7 +217,7 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="wrap">
-    <span class="kicker rise">A University of Virginia Portfolio &middot; Three Companies</span>
+    <span class="kicker rise">A University of Virginia Portfolio</span>
     <h1 class="rise" style="transition-delay:.06s">One protein.<br><b>Three paths to repair.</b></h1>
     <p class="lede rise" style="transition-delay:.12s">Every cell depends on its membrane, and every membrane eventually fails. Dr. Jianjie Ma's laboratory at UVA has advanced the science of MG53, the body's own repair protein, and out of that work came three companies, each carrying it forward in its own way.</p>
     <div class="actions rise" style="transition-delay:.18s">
@@ -225,7 +226,7 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
     </div>
 
     <div class="arcart rise" style="transition-delay:.24s" aria-hidden="true">
-      <svg viewBox="0 0 1080 340" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1080 380" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#5F259E"/>
@@ -233,13 +234,13 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
             <stop offset="100%" stop-color="#14213D"/>
           </linearGradient>
         </defs>
-        <path d="M110,260 Q540,55 970,260" fill="none" stroke="url(#arcGrad)" stroke-width="3.5"/>
+        <path d="M110,280 Q540,60 970,280" fill="none" stroke="url(#arcGrad)" stroke-width="5"/>
 
         <!-- HTIC waveform -->
-        <g transform="translate(110,260)">
-          <circle r="68" fill="#5F259E" opacity=".10"/>
-          <circle r="54" fill="#5F259E"/>
-          <g fill="white" transform="scale(0.38) translate(-150,-150)">
+        <g transform="translate(110,280)">
+          <circle r="84" fill="#5F259E" opacity=".10"/>
+          <circle r="66" fill="#5F259E"/>
+          <g fill="white" transform="scale(0.46) translate(-150,-150)">
             <rect x="56" y="138" width="10" height="23" rx="5"/>
             <rect x="72" y="126" width="11" height="47" rx="5"/>
             <rect x="92" y="96" width="11" height="108" rx="5"/>
@@ -252,28 +253,29 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
             <rect x="218" y="114" width="11" height="73" rx="5"/>
             <rect x="237" y="96" width="10" height="108" rx="5"/>
           </g>
-          <text class="mark-label" x="0" y="94" text-anchor="middle">HTIC</text>
-          <text class="mark-tag" x="0" y="114" text-anchor="middle">a confession in every cell</text>
+          <text class="mark-label" x="0" y="114" text-anchor="middle">HTIC</text>
+          <text class="mark-tag" x="0" y="136" text-anchor="middle">a confession in every cell</text>
         </g>
 
         <!-- MG Therapeutics flame (real logo) -->
-        <g transform="translate(540,55)">
-          <circle r="68" fill="#F28920" opacity=".14"/>
-          <image href="data:image/png;base64,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" x="-34" y="-43" width="68" height="86" preserveAspectRatio="xMidYMid meet"/>
-          <text class="mark-label" x="0" y="94" text-anchor="middle">MG THERAPEUTICS</text>
-          <text class="mark-tag" x="0" y="114" text-anchor="middle">a light that leads</text>
+        <g transform="translate(540,60)">
+          <circle r="84" fill="#F28920" opacity=".14"/>
+          <image href="data:image/png;base64,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" x="-42" y="-53" width="84" height="106" preserveAspectRatio="xMidYMid meet"/>
+          <text class="mark-label" x="0" y="114" text-anchor="middle">MG THERAPEUTICS</text>
+          <text class="mark-tag" x="0" y="136" text-anchor="middle">a light that leads</text>
         </g>
 
         <!-- EV53 repair ring -->
-        <g transform="translate(970,260)">
-          <circle r="68" fill="#14213D" opacity=".10"/>
-          <circle r="46" fill="none" stroke="#14213D" stroke-width="11"/>
-          <path d="M -24.1 -39.7 A 46 46 0 0 1 24.1 -39.7" fill="none" stroke="#FAF6EC" stroke-width="13" stroke-linecap="round"/>
-          <path d="M -24.1 -39.7 A 46 46 0 0 1 24.1 -39.7" fill="none" stroke="#C8102E" stroke-width="11" stroke-linecap="round"/>
-          <text class="mark-label" x="0" y="94" text-anchor="middle">EV53</text>
-          <text class="mark-tag" x="0" y="114" text-anchor="middle">a wound, bound</text>
+        <g transform="translate(970,280)">
+          <circle r="84" fill="#14213D" opacity=".10"/>
+          <circle r="56" fill="none" stroke="#14213D" stroke-width="13"/>
+          <path d="M -29.3 -48.3 A 56 56 0 0 1 29.3 -48.3" fill="none" stroke="#FAF6EC" stroke-width="16" stroke-linecap="round"/>
+          <path d="M -29.3 -48.3 A 56 56 0 0 1 29.3 -48.3" fill="none" stroke="#C8102E" stroke-width="13" stroke-linecap="round"/>
+          <text class="mark-label" x="0" y="114" text-anchor="middle">EV53</text>
+          <text class="mark-tag" x="0" y="136" text-anchor="middle">a wound, bound</text>
         </g>
       </svg>
+      <div class="arc-caption">Built on MG53</div>
     </div>
   </div>
 </section>
@@ -319,7 +321,7 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
     <div class="head">
       <span class="kicker rise">The Family</span>
       <h2 class="rise" style="transition-delay:.05s">Three companies, one philosophy.</h2>
-      <p class="rise" style="transition-delay:.1s">Each keeps its own color, its own mark, and its own path to the same biology. Visit each site for the full story.</p>
+      <p class="rise" style="transition-delay:.1s">Each keeps its own color, its own mark, and its own path to the same biology.<br>Visit each site for the full story.</p>
     </div>
 
     <div class="cards">
@@ -386,7 +388,7 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
   <div class="wrap">
     <span class="kicker rise">The Family Philosophy</span>
     <h2 class="rise" style="transition-delay:.05s">Never overt, always present.</h2>
-    <p class="body rise" style="transition-delay:.1s">Each company carries one quiet, positive symbol woven into its design: a fish, a flame, a ring, never stamped on top, never announced in the copy. Tap a mark to see the verse woven into it.</p>
+    <p class="body rise" style="transition-delay:.1s">Each company carries one quiet, positive symbol woven into its design: a fish, a flame, a ring, never stamped on top, never announced in the copy.<br>Tap a mark to see the verse woven into it.</p>
 
     <div class="verses rise" style="transition-delay:.16s">
 
