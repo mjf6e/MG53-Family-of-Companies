@@ -530,6 +530,8 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
   </div>
 </footer>
 
+<script src="mg-logo.js"></script>
+<script src="trim-logo.js"></script>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
@@ -605,7 +607,31 @@ if (faviconLink) {
     + '<path d="M31.15,18.93 A36,36 0 0 1 68.85,18.93" fill="none" stroke="#C8102E" stroke-width="7" stroke-linecap="round"/>'
     + '</svg>';
 
-  var mgPNG = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAB5CAMAAACQh/YbAAAB5lBMVEVHcEzzjg/xexLyhBDxfBHyhhDyiRD/7QDtXBbxfxHzkA71oQz1nA30mA3wdBLyiw/0ngzwchP1owv2pgvvcBPrSBj2qArvbhPtXxXvbBPoNhv3qwr2rQr3sArxgRDvahT3sgnuZxTqQhnuZhXrTxfuYxXpPxv4tQn4twjmJR7weBLpOxrtWRf4vQf4uwjsUxfoMBz5wAfsVRfoMxv5wwbsUhjzkg7nLRz6yAbzlQ30mg30mQ3wdhLwdxLrTRj0kw7zlA3rTBj6zAX95AHuYyD6zgTqRhnqRRn70Qb+8NXweBH71AXoOBzuYhXnKR381wTsVhbsVxb82QP93wTxgRH6xgb5xgb83QP5xoj//Ob+9+D+6AHrSxr3tbD5xHT70nr1ppT+9dT+6gD96+T846H+8kf/+bP/+JX+8KTxfUP954T72av/9n/60Mn2qFT3rSD+8L32pm/83dn84Mj0mGT+8Cz97NT70Jj+8OXzlI73tDr/+8j6yjf60Gj83Wv4xK/5wSv6x1X825T95Ev4u0/4vJP0mDfyjYLyig/6ysL95rv3tWD0mibyi2vuYVD82zzxg3r60rT83H3+8WXzkDX1oSjtXDj3sYrvbzzrTT/97ov4txjrVVDxhSjvclT95iYAjhJHcExjtwlgAAAAonRSTlMA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wDJF6ziAAAES0lEQVRo3rWZCVsSQRiAxy4sTc3uUrPL0sq0rOy+S7KytIMsDgNSREARxPBCQ0wtjzKPzPqrwS67zLDs7Ozut+/3zLPswr7MfDM77A4I6SIcdn9C0LwzmUzw2k+mlHYI2NqZspp6gK0/OWsYOAduzmrqBJUO8VLgFHQaYnUbYRUSAJvXHsE6BHxhwVuFrJrcBgwA0LRm2h9+B2cNi1bAceX+KBAGnFbei+iaWoiTe+6L/NTj7CJqmpH+0yFt+43vfWnLoL3/296S0rcirZqT+qW1lWh+K0aXVmdLS0svtt/VgvFbk7JjvjlJO/4lzRjdWpxdzU1J5rEjvU04WqSjDznwU+cf4qiX9s7f42jCBk73PQLV0u7GNC4sHY0kKnu/Y/T1Gz5GsboLx4ToUKdsEBjGptKGLBpVKNt/NNQLDGcq016fzagKZf05EczpOiehl1kZq82QcbaP1EoYZlXWnsawi4NpInZaiotFabavn8KIiSe5YqekrMdYlCOVBCPCFT8zXpkTF4OynGB9Qhib4+W5GVdueHkZwbhZ+K4yGSrNCt1jLz+MUxZ1CW+UHZZjQkEZ2EcidPpE9hsY9MbbA7tJ4jNpZXS3PAGaciZaShKIpEdRvJQGLaH2gixs/Kdn4gVUKM6BeAlJ1Msft5VQCVCckYJCghJLWllIJyrvNMevXyMiynWQ2XbtOj1s8tX0/tpJYuOVhTvp/PLKO21X7xDBfdZs+3bnKj1mB+Sds5dvEzE7mMyl5VvWUWlYKCPJv4PEwil3KEFrOvLnkURSyjxFUs2RxVLM8zW9jSSV+H7ubV6EdmVGtpEMWBLblPH505u/KdncFOTk4tLS0vLzE0NDQrKytJSUnW1tYICAj7+/txcXHl5eV/f39PT0/S0tKfn5+kpKQ7OztfX18ODg4EBAT+/v6qqqpaWlorKyv4+PhbW1vg4OA1NTVvb2/S0tKtra2xsbG5ubk5OTn19fXo6Oj29vbY2Ng5OTnGxsbLy8s9PT2Dg4NRUVGqqqrHx8fu7u4qKirq6uqUlJSGhoZmZmb///9YWFhVVVVJSUkAAAAA' width="0" height="0"/>';
+  document.querySelectorAll('img[src="TRIM_LOGO_PH"]').forEach(function(el){ el.src = trimPNG; });
+  document.querySelectorAll('img[src="MG_LOGO_PH"]').forEach(function(el){ el.src = mgPNG; });
+  document.querySelectorAll('image').forEach(function(el){
+    var href = el.getAttribute('href');
+    if (href === 'TRIM_LOGO_PH') el.setAttribute('href', trimPNG);
+    if (href === 'MG_LOGO_PH') el.setAttribute('href', mgPNG);
+  });
+
+  var favicons = [
+    { href: trimPNG, type: 'image/png' },
+    { href: 'data:image/svg+xml,' + encodeURIComponent(hticSVG), type: 'image/svg+xml' },
+    { href: mgPNG, type: 'image/png' },
+    { href: 'data:image/svg+xml,' + encodeURIComponent(evSVG), type: 'image/svg+xml' }
+  ];
+
+  var favIndex = 0;
+  faviconLink.type = favicons[0].type;
+  faviconLink.href = favicons[0].href;
+
+  setInterval(function(){
+    favIndex = (favIndex + 1) % favicons.length;
+    faviconLink.type = favicons[favIndex].type;
+    faviconLink.href = favicons[favIndex].href;
+  }, 2500);
+}
 </script>
 
 </body>
