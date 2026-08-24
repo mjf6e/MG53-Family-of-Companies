@@ -616,21 +616,30 @@ if (faviconLink) {
     if (href === 'MG_LOGO_PH') el.setAttribute('href', mgPNG);
   });
 
-  var favicons = [
+var favicons = [
     { href: trimFaviconPNG, type: 'image/png' },
     { href: 'data:image/svg+xml,' + encodeURIComponent(hticSVG), type: 'image/svg+xml' },
     { href: mgPNG, type: 'image/png' },
     { href: 'data:image/svg+xml,' + encodeURIComponent(evSVG), type: 'image/svg+xml' }
   ];
 
+  function setFavicon(href, type){
+    var old = document.getElementById('favicon');
+    var link = document.createElement('link');
+    link.id = 'favicon';
+    link.rel = 'icon';
+    link.type = type;
+    link.href = href;
+    if (old && old.parentNode) { old.parentNode.removeChild(old); }
+    document.head.appendChild(link);
+  }
+
   var favIndex = 0;
-  faviconLink.type = favicons[0].type;
-  faviconLink.href = favicons[0].href;
+  setFavicon(favicons[0].href, favicons[0].type);
 
   setInterval(function(){
     favIndex = (favIndex + 1) % favicons.length;
-    faviconLink.type = favicons[favIndex].type;
-    faviconLink.href = favicons[favIndex].href;
+    setFavicon(favicons[favIndex].href, favicons[favIndex].type);
   }, 2500);
 }
 </script>
