@@ -532,7 +532,6 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
 
 <script src="mg-logo.js"></script>
 <script src="trim-logo.js"></script>
-<script src="trim-favicon.js?v=3"></script>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
@@ -587,6 +586,15 @@ if (wmLink && wmEgg) {
 
 var faviconLink = document.getElementById('favicon');
 if (faviconLink) {
+  var trimSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 132">'
+    + '<defs><linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">'
+    + '<stop offset="0%" stop-color="#E2000B"/>'
+    + '<stop offset="100%" stop-color="#FFD600"/>'
+    + '</linearGradient></defs>'
+    + '<rect x="0" y="0" width="118" height="38" fill="url(#tg)"/>'
+    + '<rect x="38" y="0" width="42" height="132" fill="url(#tg)"/>'
+    + '</svg>';
+
   var hticSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">'
     + '<circle cx="150" cy="150" r="144" fill="#5F259E"/>'
     + '<rect x="56" y="138" width="10" height="23" rx="5" fill="white"/>'
@@ -617,7 +625,7 @@ if (faviconLink) {
   });
 
 var favicons = [
-    { href: trimFaviconPNG, type: 'image/png' },
+    { href: 'data:image/svg+xml,' + encodeURIComponent(trimSVG), type: 'image/svg+xml' },
     { href: 'data:image/svg+xml,' + encodeURIComponent(hticSVG), type: 'image/svg+xml' },
     { href: mgPNG, type: 'image/png' },
     { href: 'data:image/svg+xml,' + encodeURIComponent(evSVG), type: 'image/svg+xml' }
