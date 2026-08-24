@@ -532,6 +532,7 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
 
 <script src="mg-logo.js"></script>
 <script src="trim-logo.js"></script>
+<script src="trim-favicon.js"></script>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
@@ -616,7 +617,7 @@ if (faviconLink) {
   });
 
   var favicons = [
-    { href: trimPNG, type: 'image/png' },
+    { href: trimFaviconPNG, type: 'image/png' },
     { href: 'data:image/svg+xml,' + encodeURIComponent(hticSVG), type: 'image/svg+xml' },
     { href: mgPNG, type: 'image/png' },
     { href: 'data:image/svg+xml,' + encodeURIComponent(evSVG), type: 'image/svg+xml' }
