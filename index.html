@@ -195,20 +195,23 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between}
 .philosophy .kicker{color:var(--mute);justify-content:center;margin-bottom:22px}
 .philosophy h2{font-size:clamp(26px,3.8vw,40px);margin-bottom:26px}
 .philosophy p.body{color:var(--mute);font-size:16px;max-width:640px;margin:0 auto 46px}
-.verses{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:12px}
+.verses{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:12px}
 .verse{display:flex;flex-direction:column;align-items:center;text-align:center}
 .vicon{background:var(--panel);border:1px solid var(--line);border-radius:50%;width:76px;height:76px;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:transform .2s,box-shadow .2s,border-color .2s}
 .vicon:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(28,24,38,.10)}
 .vicon-mg{background:rgba(184,101,10,.12);border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center}
+.vicon-trim{background:rgba(237,108,35,.10);border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center}
+.verse.v-trim .vicon.active{border-color:var(--trim)}
 .verse.v-htic .vicon.active{border-color:var(--htic)}
 .verse.v-mg .vicon.active{border-color:var(--mg)}
 .verse.v-ev .vicon.active{border-color:var(--ev)}
 .vname{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-top:14px}
 .vtext{max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease,margin-top .4s ease;margin-top:0}
-.vtext.open{max-height:220px;opacity:1;margin-top:16px}
+.vtext.open{max-height:260px;opacity:1;margin-top:16px}
 .vtext p{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--ink);line-height:1.6;margin-bottom:8px}
 .vtext cite{font-family:var(--sans);font-style:normal;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mute2)}
-@media(max-width:760px){.verses{grid-template-columns:1fr}}
+@media(max-width:900px){.verses{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.verses{grid-template-columns:1fr}}
 
 /* ---------- CONTACT ---------- */
 .contact{padding:120px 0;text-align:center;background:var(--panel-alt);border-top:1px solid var(--line)}
@@ -466,9 +469,22 @@ footer p{font-size:12px;color:var(--mute2);letter-spacing:.02em}
   <div class="wrap">
     <span class="kicker rise">The Family Philosophy</span>
     <h2 class="rise" style="transition-delay:.05s">Never overt, always present.</h2>
-    <p class="body rise" style="transition-delay:.1s">Each company carries one quiet, positive symbol woven into its design: a fish, a flame, a ring, never stamped on top, never announced in the copy.<br>Tap a mark to see the verse woven into it.</p>
+    <p class="body rise" style="transition-delay:.1s">Each company carries one quiet, positive symbol woven into its design: a cross, a fish, a flame, a ring, never stamped on top, never announced in the copy.<br>Tap a mark to see the verse woven into it.</p>
 
     <div class="verses rise" style="transition-delay:.16s">
+
+      <div class="verse v-trim">
+        <button class="vicon" type="button" data-target="verse-trim" aria-expanded="false" aria-controls="verse-trim">
+          <span class="vicon-trim">
+            <img src="TRIM_LOGO_PH" width="34" height="7" alt="">
+          </span>
+        </button>
+        <div class="vname">TRIM-edicine</div>
+        <div class="vtext" id="verse-trim">
+          <p>&ldquo;I am the true vine, and my Father is the vinedresser. Every branch in me that does not bear fruit he takes away, and every branch that does bear fruit he prunes, that it may bear more fruit.&rdquo;</p>
+          <cite>John 15:1&ndash;2</cite>
+        </div>
+      </div>
 
       <div class="verse v-htic">
         <button class="vicon" type="button" data-target="verse-htic" aria-expanded="false" aria-controls="verse-htic">
